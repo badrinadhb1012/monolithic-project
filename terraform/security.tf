@@ -1,5 +1,5 @@
-resource "aws_security_group" "demo-sg1" {
-name = "sec1-grp"
+resource "aws_security_group" "demo-sg2" {
+name = "sec2-grp"
 description = "it allows ssh, all, http"
 ingress {
 from_port = 80
