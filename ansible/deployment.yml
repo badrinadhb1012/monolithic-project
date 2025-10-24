@@ -1,5 +1,5 @@
 - name: Deploy to project-instance1
-  hosts: project-instance1
+  hosts: working-instances1
   become: yes
   gather_facts: false
 
