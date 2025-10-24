@@ -9,7 +9,7 @@ key_name = "karthikmumbai1"
 count = 1
 vpc_security_group_ids = [aws_security_group.demo-sg2.id]
 tags = {
-Name = "project-instance1"
+Name = "working-instances1"
 Environment = "dev"
 }
 }
