@@ -1,5 +1,5 @@
 resource "aws_security_group" "demo-sg5" {
-name = "sec5-grp"
+name = "badrimonosg6"
 description = "it allows ssh, all, http"
 ingress {
 from_port = 80
