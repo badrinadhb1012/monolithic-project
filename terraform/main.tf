@@ -3,7 +3,7 @@ region = "ap-south-1"
 }
 
 resource "aws_instance" "key" {
-ami = "ami-06fa3f12191aa3337"
+ami = "ami-0d176f79571d18a8f"
 instance_type = "t3.micro"
 key_name = "karthikmumbai1"
 count = 1
