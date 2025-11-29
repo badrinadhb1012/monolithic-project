@@ -2,7 +2,7 @@
 - hosts: aws_ec2
   become: yes
   connection: ssh
-  user: ec2-user
+  remote_user: ec2-user   # or use ansible_ssh_user
 
   vars:
     ansible_ssh_private_key_file: "karthikmumbai1.pem"
@@ -10,15 +10,21 @@
 
   tasks:
     - name: install httpd
-      action: yum name=httpd state=present
+      yum:
+        name: httpd
+        state: present
 
     - name: restart httpd
-      service: name=httpd state=restarted
+      service:
+        name: httpd
+        state: restarted
 
     - name: install git in dev server
-      action: yum name=git state=present
+      yum:
+        name: git
+        state: present
 
-      - name: get the source code from github
+    - name: get the source code from github
       git:
         repo: "https://github.com/devops0014/staticsite-docker.git"
         dest: /var/www/
